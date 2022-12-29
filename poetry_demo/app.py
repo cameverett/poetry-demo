@@ -1,12 +1,12 @@
-from poetry_demo.log import get_logger
-from poetry_demo.yo import yoyoyo
+from poetry_demo.utils.log import get_logger
+from poetry_demo.example import my_function
 
 
 if __name__ == "__main__":
     logger = get_logger(__name__)
     logger.info("Application startup")
 
-    yoyoyo()
+    my_function()
 
     try:
         raise ValueError
