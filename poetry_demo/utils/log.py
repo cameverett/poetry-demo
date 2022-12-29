@@ -2,7 +2,7 @@
 from functools import lru_cache
 import logging
 
-from poetry_demo.config import get_config
+from poetry_demo.utils.config import get_config
 
 
 if get_config().logger_enabled:
