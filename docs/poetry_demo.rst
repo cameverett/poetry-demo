@@ -20,14 +20,6 @@ poetry\_demo.config module
    :undoc-members:
    :show-inheritance:
 
-poetry\_demo.jo module
-----------------------
-
-.. automodule:: poetry_demo.jo
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 poetry\_demo.log module
 -----------------------
 
