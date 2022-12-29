@@ -1,8 +1,7 @@
-# Logging
-from functools import lru_cache
+from functools import cache
 import logging
 
-from poetry_demo.utils.config import get_config
+from .config import get_config
 
 
 if get_config().logger_enabled:
@@ -12,7 +11,7 @@ if get_config().logger_enabled:
     )
 
 
-@lru_cache()
+@cache
 def get_logger_noop() -> logging.Logger:
     """Creates :class:`logging.Logger` that does not display log records useful for testing or
      debugging
@@ -35,6 +34,6 @@ def get_logger(logger_category: str) -> logging.Logger:
         ``logger_category`` value
     :rtype: :class:`logging.Logger`
     """
-    if not get_config().logger_enabled:
-        return get_logger_noop()
-    return logging.getLogger(logger_category)
+    if get_config().logger_enabled:
+        return logging.getLogger(logger_category)
+    return get_logger_noop()
