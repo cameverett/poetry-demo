@@ -1,4 +1,4 @@
-from functools import lru_cache
+from functools import cache
 from typing import Optional
 
 from dotenv import load_dotenv
@@ -20,7 +20,7 @@ class AppConfig(BaseSettings):
         env_prefix = "poetry_demo_"
 
 
-@lru_cache()
+@cache
 def get_config(dotenv_path: str | None = None) -> AppConfig:
     """Load environment configuration and instantiates a cached instance :class:`AppConfig`.
     Makes use of `dotenv` package to load parameters from file or environment variables.

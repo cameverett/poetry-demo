@@ -1,6 +1,6 @@
 # Sample Poetry Demo
 
 ## Purpose
-Learn how to start up a poetry project
+Boilerplate to start up a Python Poetry based project
 
 
